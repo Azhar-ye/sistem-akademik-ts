@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "377110101046",
+    "project_id": "sistem-akademik-ts",
+    "storage_bucket": "sistem-akademik-ts.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:377110101046:android:62d1b012de19f05170ac97",
+        "android_client_info": {
+          "package_name": "com.example.sistem_akademik_firebase"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD6_-sa0QVwWRhPgWdDFP9b5AvDTkkBnC8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
