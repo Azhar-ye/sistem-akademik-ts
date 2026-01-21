@@ -1,16 +1,63 @@
-# sistem_akademik_firebase
+# 📚 Sistem Akademik Flutter + Firebase (Realtime)
 
-A new Flutter project.
+Aplikasi **Sistem Akademik** berbasis **Flutter** yang terhubung dengan **Firebase Authentication** dan **Cloud Firestore** secara **real-time**.
 
-## Getting Started
+Project ini memiliki fitur login seperti aplikasi modern, manajemen nilai mahasiswa (CRUD), manajemen mata kuliah dari Firestore, serta dashboard statistik akademik.
 
-This project is a starting point for a Flutter application.
+---
 
-A few resources to get you started if this is your first Flutter project:
+## ✨ Fitur Utama
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+### 🔐 Authentication
+- Login & Register menggunakan **Firebase Auth (Email/Password)**
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+### 👤 Role User
+- **Admin**
+  - CRUD Nilai Mahasiswa
+  - CRUD Mata Kuliah
+- **User**
+  - Hanya bisa melihat data (Read Only)
+
+### 📝 Nilai Mahasiswa (Realtime)
+- Tambah / Edit / Hapus nilai mahasiswa (khusus admin)
+- Data realtime update menggunakan **StreamBuilder + Firestore snapshots**
+- Search **NIM / Nama**
+- Filter berdasarkan **Mata Kuliah**
+
+### 📌 Mata Kuliah (Realtime)
+- Data mata kuliah diambil dari **Firestore** (bukan list manual)
+- Dropdown matkul otomatis muncul saat input nilai
+
+### 📊 Dashboard Statistik
+- Total Mahasiswa (unik berdasarkan NIM)
+- Total Data Nilai
+- Total Nilai (akumulasi)
+- Rata-rata Nilai keseluruhan
+
+### 🎨 UI Modern
+- Material 3 Theme
+- Card modern
+- Drawer menu navigasi
+
+---
+
+## 🛠️ Tech Stack
+- Flutter
+- Firebase Core
+- Firebase Authentication
+- Cloud Firestore
+
+---
+
+## 📂 Struktur Firestore Database
+
+### Collection: `users`
+Doc ID = UID dari Firebase Auth
+
+Contoh:
+```json
+{
+  "email": "user@gmail.com",
+  "role": "user",
+  "createdAt": "timestamp"
+}
